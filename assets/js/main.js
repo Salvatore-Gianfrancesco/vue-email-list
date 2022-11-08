@@ -3,7 +3,7 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
-            max: 100,
+            max: 10,
             emails: [],
         }
     },
