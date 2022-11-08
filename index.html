@@ -15,7 +15,7 @@
     <div id="app">
         <div class="container mt-5">
             <h1>Email List</h1>
-            <div class="ul">
+            <div class="ul" v-if="emails.length === max">
                 <div class="li py-1" v-for="email in emails">{{email}}</div>
             </div>
         </div>

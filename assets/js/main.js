@@ -3,9 +3,8 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
-            max: 10,
+            max: 100,
             emails: [],
-            tempArr: []
         }
     },
     methods: {
@@ -17,10 +16,7 @@ createApp({
                 .get("https://flynn.boolean.careers/exercises/api/random/mail")
                 .then(response => {
                     // console.log(response.data.response);
-                    this.tempArr.push(response.data.response);
-                    if (this.tempArr.length === this.max) {
-                        this.emails = this.tempArr;
-                    }
+                    this.emails.push(response.data.response);
                 })
 
         }
